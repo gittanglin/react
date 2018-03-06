@@ -16,8 +16,8 @@ let commonConfig = {
   devtool: NODE_ENV == NODE_ENV_CONFIG.DEV ? 'inline-source-map' : 'cheap-module-source-map',
   output: {
     path: path.join(__dirname, './dist'),
-    filename: NODE_ENV == NODE_ENV_CONFIG.DEV ? '[name].[hash].js' : '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    filename: NODE_ENV == NODE_ENV_CONFIG.DEV ? '[name].[hash].js' : '[name].[chunkhash:5].js',
+    chunkFilename: '[name].[chunkhash:5].js',
     publicPath: "/"
   },
   module: {
