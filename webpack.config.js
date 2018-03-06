@@ -30,12 +30,18 @@ let commonConfig = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader?modules&localIdentName=[local]-[hash:base64:5]', "postcss-loader"]
+        use: ['style-loader', 'css-loader?modules&localIdentName=[local]-[hash:base64:5]', "postcss-loader"],
+        exclude: path.join(__dirname, 'node_modules'),
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', "postcss-loader"],
       },
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader?modules&localIdentName=[local]-[hash:base64:5]", "sass-loader", "postcss-loader"]
       },
+
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [{
