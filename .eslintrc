@@ -1,0 +1,22 @@
+{
+  "root": true,
+  parser: "babel-eslint",
+  "rules": {
+    //debugger调试代码未删除
+    "no-debugger": 1,
+    //case重复
+    "no-duplicate-case": 1,
+    //变量未定义
+    "no-undef": 0,
+    //无效的类型判断
+    "valid-typeof": 1,
+    //行尾缺少分号可能导致一些意外情况
+    "no-unexpected-multiline": 1,
+    //变量定义后未使用
+    "block-scoped-var": 1,
+    //多余的分号
+    "no-extra-semi": 1,
+    //空代码块
+    "no-empty": 1
+  }
+}
